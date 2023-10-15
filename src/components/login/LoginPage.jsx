@@ -5,7 +5,7 @@ import RightSection from "./RightSection";
 
 export function LoginPage(props) {
   return (
-    <div className="flex flex-row ">
+    <div className="flex flex-row phone:flex-col phone:items-end">
       <LeftSection />
       <RightSection />
     </div>

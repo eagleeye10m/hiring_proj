@@ -15,6 +15,9 @@ module.exports = {
       colors: {
         neutral: "#F7F7F7",
       },
+      screens: {
+        phone: { max: "375px" },
+      },
     },
   },
   plugins: [],
