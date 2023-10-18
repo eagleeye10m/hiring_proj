@@ -1,0 +1,22 @@
+@media (max-width: 375px) {
+  .rightSection {
+    background-color: white;
+    width: 100%;
+    height: auto;
+  }
+  .rightSection .logo {
+    position: relative;
+    top: -30vh;
+    width: 100%;
+    height: 61vh;
+  }
+  .rightSection .line {
+    display: block;
+    margin-top: -20vh;
+  }
+  .rightSection::before,
+.rightSection::after {
+    background-image: none;
+    display: none;
+  }
+}/*# sourceMappingURL=RightSection.module.css.map */

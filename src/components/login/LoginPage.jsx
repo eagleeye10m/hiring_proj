@@ -1,14 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "tailwindcss/tailwind.css";
 import LeftSection from "./LeftSection";
 import RightSection from "./RightSection";
+import Descriptions from "./ResponsiveSection/Descriptions";
 
-export function LoginPage(props) {
+export function LoginPage() {
+  const [desComponent, showDesComponent] = useState(false);
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth <= 375) {
+        showDesComponent(true);
+      } else showDesComponent(false);
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    <div className="flex flex-row phone:flex-col phone:items-end">
+    <section className="flex flex-row phone:flex-col phone:items-end">
       <LeftSection />
       <RightSection />
-    </div>
+      {desComponent && <Descriptions />}
+    </section>
   );
 }
 

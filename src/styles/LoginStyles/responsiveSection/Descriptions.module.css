@@ -1,0 +1,12 @@
+.descriptions {
+  @apply flex flex-wrap flex-row-reverse;
+}
+
+.descriptions li {
+  @apply flex flex-col items-center w-1/2 text-center text-[13px] mb-1;
+}
+
+.descriptions li span {
+  @apply font-bold text-[15px] mb-[15px];
+}
+/*# sourceMappingURL=Descriptions.module.css.map */
